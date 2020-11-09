@@ -12,6 +12,10 @@ javafx {
     modules = [ 'javafx.controls', 'javafx.fxml' ]
 }
 
+task installWrapper(type: Wrapper) {
+    gradleVersion = '6.7'
+}
+
 
 task buildCore(dependsOn: 'copyJson') {
     println "build core"
