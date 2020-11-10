@@ -10,29 +10,33 @@ import java.util.Map;
 
 public class DataTest {
 
-    private String json;
-    private Map<String, List<CountryDataPoint>> countries;
+    private List<CountryDataPoint> germany;
 
     @Before
     public void setUp() {
         DataLoader dataLoader = new DataLoader();
         DataParser dataParser = new DataParser();
-        json = dataLoader.loadJsonFile("countries-aggregated_json.json");
-        countries = dataParser.parseJsonData(json);
+        String json = dataLoader.loadJsonFile("countries-aggregated_json.json");
+        Map<String, List<CountryDataPoint>> countries = dataParser.parseJsonData(json);
+        germany = countries.get("Germany");
     }
 
     @Test
-    public void fileLoadingTest() {
-        Assert.assertEquals(json.length(), 5373232);
+    public void confirmedTest() {
+        Assert.assertEquals(germany.get(98).Confirmed, 161539);
     }
 
     @Test
-    public void dataParsingTest() {
-        Assert.assertEquals(190 ,countries.size());
+    public void deathsTest() {
+        Assert.assertEquals(germany.get(98).Deaths, 6467);    }
+
+    @Test
+    public void recoveredTest() {
+        Assert.assertEquals(germany.get(98).Recovered, 120400);
     }
 
     @Test
-    public void germanyParsingTest() {
-        Assert.assertEquals(291, countries.get("Germany").size());
+    public void DateTest() {
+        Assert.assertEquals(germany.get(98).Date, "2020-04-29");
     }
 }
