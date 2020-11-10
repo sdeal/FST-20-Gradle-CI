@@ -6,7 +6,7 @@ git:
 before_install:
   - gradle installWrapper
   
-job:
+jobs:
   include:
   - jdk: openjdk8
     os: linux
@@ -18,8 +18,8 @@ job:
   - os: osx
 
 Notifications:
-email:
-recipients:
-- diehl@uni-trier.de
-on_success: never
-on_failure: always //change
+  email:
+    recipients:
+    - diehl@uni-trier.de
+    on_success: never
+    on_failure: always //change
