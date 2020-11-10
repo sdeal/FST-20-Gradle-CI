@@ -3,6 +3,8 @@ language: java
 git:
   quiet: false
   
+- brew install gradle
+  
 before_install:
   - gradle installWrapper
   
