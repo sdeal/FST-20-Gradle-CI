@@ -5,3 +5,21 @@ git:
   
 before_install:
   - gradle installWrapper
+  
+job:
+  include:
+  - jdk: openjdk8
+    os: linux
+  - jdk: openjdk11
+    os: linux
+  - jdk: openjdk11
+    os: osx
+  allow_failures:
+  - os: osx
+
+Notifications:
+email:
+recipients:
+- diehl@uni-trier.de
+on_success: never
+on_failure: always //change
