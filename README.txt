@@ -1,6 +1,6 @@
 Code für das Übungsblatt Gradle/CI. 
 
-Benutzunng:
+Benutzung:
 
 gradle buildCore oder gradle buildUI zum Bauen nutzen
 
