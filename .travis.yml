@@ -17,6 +17,7 @@ jobs:
   allow_failures:
   - os: osx
 script: gradle buildCore
+script: gradle buildUI
 
 Notifications:
   email:
