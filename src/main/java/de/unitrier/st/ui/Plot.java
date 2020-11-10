@@ -20,7 +20,7 @@ public class Plot {
         final NumberAxis yAxis = new NumberAxis();
 
         xAxis.setLabel("Date");
-        yAxis.setLabel("Number of infected people");
+        yAxis.setLabel("Number of people");
 
         final LineChart<String, Number> lineChart = new LineChart<String, Number>(xAxis, yAxis);
         lineChart.setTitle("Corona numbers from germany");
