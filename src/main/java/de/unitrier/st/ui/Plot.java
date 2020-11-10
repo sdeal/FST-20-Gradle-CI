@@ -23,7 +23,7 @@ public class Plot {
         yAxis.setLabel("Number of people");
 
         final LineChart<String, Number> lineChart = new LineChart<String, Number>(xAxis, yAxis);
-        lineChart.setTitle("Corona numbers from germany");
+        lineChart.setTitle("Corona numbers from Germany");
         XYChart.Series confirmed = new XYChart.Series();
         XYChart.Series recovered = new XYChart.Series();
         XYChart.Series deaths = new XYChart.Series();
